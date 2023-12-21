@@ -347,7 +347,7 @@ function Create_grapf() {
 	let ii=0;
 	
 	var plot_color = new Array('red', 'blue', 'yellow' ,'green','purple','pink','navy','teal','lime','aqua','fuchsia','maroon','gray','silver','skyblue');
-	var Yokojiku = new Array('0.0','0.5','1.0','1.5','2.0','2.5','3.0','3.5','4.0');
+	var Yokojiku = new Array('0.0','0.5','1.0','1.5','2.0','2.5','3.0','3.5','4.0','4.5','5.0');
 	
 	
 	if(startflag1==1 &&  startflag2==1){
@@ -363,13 +363,13 @@ function Create_grapf() {
 		}
 	
 		//縦目盛り線
-		for(i=1;i<=8;i++){
-			display_text = display_text + "<line x1='" + screen_w/8*i + "' y1='0' x2='" + (screen_w/8*i) + "' y2='" + screen_h + "' style='stroke:gray;stroke-width:1' />";
+		for(i=1;i<=10;i++){
+			display_text = display_text + "<line x1='" + screen_w/10*i + "' y1='0' x2='" + (screen_w/10*i) + "' y2='" + screen_h + "' style='stroke:gray;stroke-width:1' />";
 		}
 	
 		//横目盛り
-		for(i=0;i<=8;i++){	
-			display_text = display_text + "<text fill='#448aff' font-family='Script' font-weight='bold'  x='" + screen_w/8*i + "' y='"+(screen_h+30)+"' font-size='20' text-anchor='middle' stroke-width='1'>"+Yokojiku[i]+"</text>"
+		for(i=0;i<=10;i++){	
+			display_text = display_text + "<text fill='#448aff' font-family='Script' font-weight='bold'  x='" + screen_w/10*i + "' y='"+(screen_h+30)+"' font-size='20' text-anchor='middle' stroke-width='1'>"+Yokojiku[i]+"</text>"
 		}
 		
 		//縦目盛り
@@ -379,7 +379,7 @@ function Create_grapf() {
 	    
 		
 		//##########　X軸のタイトル表示　##########
-		display_text = display_text + "<text  fill='#448aff' fill='#448aff' font-family='Comic Sans MS' font-weight='bold'  x='"+screen_w/10*5+"' y='"+(screen_h+70)+"' font-size='25' text-anchor='middle' stroke-width='1'>時間（秒）</text>"
+		display_text = display_text + "<text  fill='#448aff' fill='#448aff' font-family='Comic Sans MS' font-weight='bold'  x='"+screen_w/10*5+"' y='"+(screen_h+70)+"' font-size='25' text-anchor='middle' stroke-width='1'>時間（ms）</text>"
 		
 	
 		//##########　Y軸のタイトル表示　##########
